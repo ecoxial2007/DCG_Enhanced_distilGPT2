@@ -1,0 +1,37 @@
+.
+├── README.md
+├── config
+│   ├── train_iu_xray.yaml
+│   └── train_mimic_cxr.yaml
+├── checkpoint
+│   ├── MedSAM
+│   ├── distilgpt2
+│   ├── BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+│   ├── bert-base-uncased
+│   └── stanford
+│       └── chexbert
+├── dataset
+│   ├── iu_x-ray
+│   │   ├── adjacency_matrix_191
+│   │   ├── image_features
+│   │   ├── images
+│   │   ├── node_features_gpt2.h5
+│   │   └── node_mapping.json
+│   └── mimic_cxr
+├── tools
+│   ├── offline_retrieval #step-1 for matching report
+│   ├── generate_graph #step-2 for getting graph
+│   ├── metrics #for validation
+│   ├── dataset #dataloader
+│   ├── chexbert.py
+│   ├── classifier.py
+│   ├── graph.py
+│   ├── multi_image.py
+│   ├── new_module.py
+│   └── utils.py
+├── segment_anything
+├── medsam2distilgpt2_iu_xray.py
+├── medsam2distilgpt2_mimic_cxr.py
+├── train_ver4_iu_xray.py
+└── train_ver4_mimic.py
+

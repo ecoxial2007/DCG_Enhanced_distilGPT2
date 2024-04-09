@@ -1,0 +1,31 @@
+exp_dir: experiments
+dataset_dir: ./dataset
+ckpt_zoo_dir: ./checkpoint
+# venv_path: venv/bin/activate  # If using a SLURM cluster, uncomment this line.
+
+devices: 1
+num_nodes: 1
+num_workers: 5
+strategy: ddp_find_unused_parameters_true
+
+module: medsam2distilgpt2_iu_xray
+definition: MedSAM2DistilGPT2IUXRay
+
+encoder_lr: 3e-6
+decoder_lr: 3e-5
+mbatch_size: 6  # single GPU setting
+every_n_epochs: 1
+
+monitor: 'val_chen_cider'
+monitor_mode: 'max'
+precision: 16
+decoder_max_len: 128
+num_test_beams: 4
+
+enable_progress_bar: True
+weights_summary: 'full'
+
+early_stopping: True
+patience: 10
+min_delta: 1e-4
+deterministic: False
