@@ -91,7 +91,7 @@ To run the project, follow these steps:
 
 ## 💻 File Structure
 
-- See `folder_structure.txt`[README.md](README.md)
+- See `folder_structure.txt`
 
 
 ---
